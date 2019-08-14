@@ -1,10 +1,16 @@
 import React from 'react';
+import Todo from './Todo';
+import {initialState, reducer} from "../reducer/reducer"
 
-function ToggleCompleted(){
+const  ToggleCompleted = (toggle = [],actio)=>{
+switch (action.type){
+  case 'TOGGLE_TODO'
+}
     return (
-<ul>
+      ...toggle
+<div>
   {todos.map(todo =>
-    <li key={todo.id}
+    <todos key={todo.id}
         onClick={() => {
           dispatch({
             type: 'TOGGLE_TODO',
@@ -18,9 +24,9 @@ function ToggleCompleted(){
               'none'
         }}>
       {todo.text}
-    </li>
+ 
   )}
-</ul>
-    );
-}
+
+    
+
 export default ToggleCompleted;
